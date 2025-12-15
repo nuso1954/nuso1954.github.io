@@ -1,0 +1,98 @@
+/*	globalNavigation
+-----------------------------*/
+@media screen and (min-width: 831px){
+
+ul#globalNavi{
+	margin:0 10px 0 0 ;
+	width:200px;
+	float:left;
+	list-style-type:none;
+}
+
+ul#globalNavi li{
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	height: 40px;
+	display: inline;
+}
+
+ul#globalNavi a {
+	margin-bottom:10px;
+	text-indent: -9999px;
+	text-decoration: none;
+	border-bottom:none;
+	display: block;
+	width: 200px;
+	height: 40px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+/*----------------------link-------------------------------*/
+
+#menu1 a { background-image: url(img/navi1.gif); }
+#menu2 a { background-image: url(img/navi2.gif); }
+#menu3 a { background-image: url(img/navi3.gif); }
+#menu4 a { background-image: url(img/navi4.gif); }
+#menu5 a { background-image: url(img/navi5.gif); }
+#menu6 a { background-image: url(img/navi6.gif); }
+#menu7 a { background-image: url(img/navi7.gif); }
+
+/*----------------------hover----------------------------*/
+
+#globalNavi a:hover {
+  text-decoration: none;
+  background-position: -200px 0;
+  background-repeat: no-repeat;
+}
+}
+
+/*----------------------go to top----------------------------*/
+
+.page-top
+{
+	display: none;
+	margin: 0 ;
+	padding: 0 ;
+}
+ 
+.page-top p
+{
+	margin: 0 ;
+	padding: 0 ;
+	width: 60px;
+	height:60px;
+	
+	position: fixed ;
+	right: 32px ;
+	bottom: 32px ;
+}
+ 
+.move-page-top
+{
+	display: block ;
+	background: #444 ;
+	width: 60px ;
+	height: 60px ;
+	border-radius:30px;
+
+	color: #fff ;
+	line-height: 60px ;
+	text-decoration: none ;
+	text-align: center ;
+	box-shadow:0 0 3px 3px rgba(0,0,0,0.4);
+	opacity: 0.9 ;
+
+	-webkit-transition:all 0.3s ;
+	-moz-transition:all 0.3s ;
+	transition:all 0.3s ;
+}
+
+.move-page-top:hover
+{
+	opacity: 1 ;
+	box-shadow:0 0 6px 4px rgba(0,0,0,0.5);
+	color: #fff ;
+}
+

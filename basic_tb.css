@@ -1,0 +1,488 @@
+/*------------------------------------------
+
+        S P E C I A L    T H A N K S
+
+                Shun  Kosaka
+
+                 2010.12.16
+
+------------------------------------------*/
+@charset "UTF-8" ;
+
+/*-----------------------------------------------------------
+	Basic_tb.css
+	Fundamental Style Sheet fot small Tablet
+
+	(Last Update 2015/4/28)
+------------------------------------------------------------*/
+
+@media screen and (max-width: 830px) and (min-width: 641px){
+
+/*-----------------------------------------------------------
+	Universal selector
+------------------------------------------------------------*/
+
+html{
+	}
+/*-----------------------------------------------------------
+	Structure Module
+------------------------------------------------------------*/
+
+body{
+}
+
+h1{
+}
+
+h1 a{
+	margin-bottom:3px;
+	text-indent:-9999px;
+	text-decoration:none;
+	border-bottom:none;
+	display: block;
+	width: 440px;
+	height: 70px;
+	background-image: url(./img/logo.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+h1 a:link{
+border-bottom:none;
+}
+
+div#wrapper{
+}
+
+div#header{
+}
+
+div#header a{
+}
+
+div#main{
+}
+
+div#context{
+	padding-top:4px;
+	padding-left:3px;
+	padding-right:3px;
+	background-color:#dddddd;
+}
+
+div#footer{
+	font-size:75%;
+	text-align:center;
+}
+
+.clear{
+}
+/*-----------------------------------------------------------
+	Text Module
+------------------------------------------------------------*/
+
+p {
+    margin:0 0.3em 1em;
+    width:95%;
+	line-height:1.4em;
+}
+
+h3{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-left:solid 4px #65b252;
+	padding-left:0.2em;
+	margin-bottom:0.5em;
+}
+
+h4{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin:0.5em 0 0.5em 0;
+	padding-left:10px;
+	color:#4d853f;
+	font-size:110%;
+}
+
+/*-----------------------------------------------------------
+	Hypertext Module
+------------------------------------------------------------*/
+
+a:link {
+	color:#46825c;
+	text-decoration:none;
+	border-bottom:dashed 1px #404040;
+}
+
+a:visited {
+	color:#46825c;
+	text-decoration:none;
+	border-bottom:dashed 1px #404040;
+}
+
+a:hover {
+	color:#5aa877;
+	text-decoration:none;
+	border-bottom:solid 1px #404040;
+}
+
+h4 a:link{
+	color:#4d853f;
+	border-bottom:dashed 1px #4d853f;
+}
+
+h4 a:visited {
+	color:#4d853f;
+	border-bottom:dashed 1px #4d853f;
+}
+
+h4 a:hover {
+	color:#4d853f;
+	border-bottom:solid 1px #4d853f;
+}
+
+/*-----------------------------------------------------------
+	List Module
+	このへん修正いる
+------------------------------------------------------------*/
+
+ul{
+	margin-bottom:1em;
+	list-style-type:square;
+	list-style-position:inside;
+}
+
+dl.program {
+	margin-bottom:1em;
+	width:100%;
+	margin-left:0.4em;
+}
+
+dl.program dt{
+	line-height:1.4em;
+	float:left;
+	width:10em;
+}
+
+dl.program dd{
+	line-height:1.4em;
+	margin-left:10em;
+	margin-bottom:0.3em;
+}
+
+/*-----------------------------------------------------------
+	Image Module
+------------------------------------------------------------*/
+
+div#photo img{
+	width:100%;
+	margin-bottom:1px;
+	vertical-align:bottom;
+}
+
+/*-----------------------------------------------------------
+	Form Module
+------------------------------------------------------------*/
+
+select {
+	border:1px solid #808080;
+	width:20em;
+	margin-left:4%;
+	font-size:120%;
+	height:1.5em;
+	width:91%;
+}
+
+input {
+	border:1px solid #808080;
+	width:20%;
+	font-size:120%;
+	margin-top:0.5em;
+	height:1.5em;
+}
+
+input.mail, input.name {
+	margin-left:4%;
+	width:80%;
+}
+
+input.btn {
+	margin-left:4%;
+}
+
+textarea {
+	padding:1px;
+	border:1px solid #808080;
+	margin-left:4%;
+	margin-right:4%;
+	width:91%;
+	height:12em;
+}
+/*-----------------------------------------------------------
+	in Index
+	このへん修正いる
+------------------------------------------------------------*/
+
+dl#update {
+	margin-bottom:10px;
+	margin-left:0.4em;
+	width:80%;
+}
+
+dl#update dt{
+	line-height:1.4em;
+	float:left;
+	width:20%;
+}
+
+dl#update dd{
+	line-height:1.4em;
+	margin-left:20%;
+}
+/*-----------------------------------------------------------
+	in About Us
+	このへん修正いる
+------------------------------------------------------------*/
+
+dl#calendar {
+	border:solid 1px #808080;
+    border-width: 0 1px 1px;
+	margin-bottom:.0.5em;
+	margin-left:5px;
+float:left;
+}
+
+dl#calendar a{
+	color:#404040;
+	text-decoration:none;
+	border-bottom:dashed 1px #404040;
+}
+
+dl#calendar dt{
+	border-top:solid 1px #808080;
+	float:left;
+	text-align:right;
+	line-height:1.4em;
+	padding:0.1em 0;
+	width:3em;
+}
+
+dl#calendar dd{
+	border-top:solid 1px #808080;
+	border-left:solid 1px #808080;
+	margin-left:3em;
+	line-height:1.4em;
+	padding:0.1em 0.1em 0.1em 0.3em;
+	width:8em;
+}
+
+div#event{
+	border:1px dashed #808080;
+	margin-left:13em;
+	margin-right:5px;
+	margin-bottom:5em;
+	min-width:152px;
+	height:20em;
+	padding:0 5px;
+}
+
+dl#part {
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1em;
+}
+
+dl#part dt{
+	background-color:#444;
+	color:#fff;
+	line-height:1.4em;
+	padding:3px 6px;
+	width:140px;
+	font-size:120%;
+}
+
+dl#part dd{
+	border:solid 1px #444;
+	line-height:1.3em;
+	margin-top:-1px;
+	padding:3px;
+	margin-bottom:10px;
+}
+
+dl.history{
+	margin-left:1em;
+	margin-bottom:1em;
+}
+
+dl.history dt{
+	line-height:1.4em;
+	float:left;
+	width:9em;
+}
+
+dl.history dd{
+	line-height:1.4em;
+	margin-left:9em;
+}
+/*-----------------------------------------------------------
+	in Concert
+------------------------------------------------------------*/
+
+p.more {
+	font-size:90%;
+}
+div#fbpost a {
+	border:none;
+}
+img.concert {
+	border:1px solid #808080;
+	float:right;
+	margin:5px 10px;
+	padding:2px;
+}
+div#fbpost {
+}
+/*-----------------------------------------------------------
+	in Inquiry
+------------------------------------------------------------*/
+
+p.form {
+	margin-top:0.5em;
+	margin-bottom:0px;
+}
+/*-----------------------------------------------------------
+	in Records
+------------------------------------------------------------*/
+
+div#records p{
+	margin-bottom:0.5em;
+}
+div#records h4{
+	margin-top:1em;
+	margin-bottom:0.2em;
+}
+div#records dl{
+	margin-left:0.4em;
+
+}
+
+div#records dl dt{
+	line-height:1.3em;
+	width:3em;
+	float:left;
+}
+
+div#records dl dd{
+	line-height:1.3em;
+	margin-left:3em;
+}
+
+div.comp{
+	float:left;
+	width:10em;
+}
+
+div.name{
+	margin-left:10em;
+}
+
+div#records a{
+	border:none;
+}
+
+div#guide{
+	margin-top:2em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1.5em;
+	line-height:1.2em;
+	width:500px;
+}
+
+div#guide span{
+	padding:0.4em 0.5em;
+	margin:0 0.5em;
+	border:solid 1px #808080;
+}
+
+div#guide span.pageNum{
+	display:none;
+}
+
+div#guide a{
+	border:none;
+}
+
+div#guide a.num{
+	margin:0 0.5em;
+}
+
+div#guide span.arrow{
+	padding:0.6em 0.6em;
+	margin:3px 25px;
+	border:solid 1px #aaa;
+	font-size:150%;
+	color:#aaa;
+	border-radius:4px;
+}
+
+div#guide a.arrow{
+	padding:0.6em 0.6em;
+	margin:3px 25px;
+	background-color:#444;
+	border:solid 1px #444;
+	font-size:150%;
+	color:#fff;
+	border-radius:4px;
+}
+
+div#search {
+	font-size:90%;
+	margin-left:6%;
+	margin-right:6%;
+	padding-top:0.8em;
+	padding-bottom:0.8em;
+	padding-left:1em;
+	border:solid 1px #808080;
+}
+
+div#search a{
+	border:none;
+}
+
+div#search div{
+
+}
+
+div#search form{
+}
+
+div#search form input.text{
+	margin-top:0.5em;
+	font-size:120%;
+	height:1.5em;
+	width:45%;
+}
+
+a.highslide-credits,
+a.highslide-credits i {
+	border:none;
+	font-size:50%;
+}
+/*-----------------------------------------------------------
+	in Link
+------------------------------------------------------------*/
+
+div#link dl{
+	margin-bottom:1em;
+}
+
+div#link dt{
+	line-height:1.8em;
+}
+
+div#link dd{
+	font-size:90%;
+}
+}

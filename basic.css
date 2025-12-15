@@ -1,0 +1,471 @@
+/*------------------------------------------
+
+        S P E C I A L    T H A N K S
+
+                Shun  Kosaka
+
+                 2010.12.16
+
+------------------------------------------*/
+@charset "UTF-8" ;
+
+/*-----------------------------------------------------------
+	Basic.css
+	Fundamental Style Sheet for Tablet/PC
+
+	(Last Update 2015/4/28)
+------------------------------------------------------------*/
+
+*{
+	padding:0;
+	margin:0;
+	border:0;
+	color:#080808;
+	font-family: Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+@media screen and (min-width: 831px){
+
+/*-----------------------------------------------------------
+	Universal selector
+------------------------------------------------------------*/
+
+html{
+	overflow-y:scroll;
+	}
+/*-----------------------------------------------------------
+	Structure Module
+------------------------------------------------------------*/
+
+body{
+	background-color:#efefef;
+}
+
+h1{
+	width: 440px;
+	height: 70px;
+	display: inline;
+}
+
+h1 a{
+	margin-bottom:3px;
+	text-indent:-9999px;
+	text-decoration:none;
+	border-bottom:none;
+	display: block;
+	width: 440px;
+	height: 70px;
+	background-image: url(./img/logo.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+div#wrapper{
+	margin:0 auto;
+	background-color:#fff;
+	padding-left:1em;
+	padding-right:1em;
+	width:800px;
+	border-left:1px solid #808080;
+	border-right:1px solid #808080;
+}
+
+div#header{
+	clear:both;
+	margin-bottom:0.5em;
+}
+
+div#header a{
+	border:none;
+}
+
+div#main{
+	margin:-4px 0 0 210px;
+	width:590px;
+	font-size:90%;
+}
+
+div#context{
+	margin:-4px 0 -5px 0;
+	padding-left:1.3em;
+	padding-right:0.8em;
+	padding-bottom:20px;
+	padding-top:7px;
+	height:100%;
+	background-color:#dddddd;
+	border-radius:7px;
+}
+
+div#footer{
+	padding-top:0.5em;
+  	padding-bottom:1em;
+	font-size:75%;
+	text-align:center;
+	clear:both;
+}
+
+.clear{
+	clear:both;
+}
+/*-----------------------------------------------------------
+	Text Module
+------------------------------------------------------------*/
+
+p {
+    margin-bottom:1em;
+	line-height:1.4em;
+	width:480px;
+}
+
+h3{
+	border-left:solid 4px #65b252;
+	padding:5px;
+	margin-bottom:0.5em;
+	margin-left:-0.5em;
+}
+
+h4{
+	margin:0.5em 0 0.5em 0;
+	color:#4d853f;
+	font-size:110%;
+}
+
+/*-----------------------------------------------------------
+	Hypertext Module
+------------------------------------------------------------*/
+
+a:link {
+	color:#404040;
+	text-decoration:none;
+	border-bottom:dashed 1px #404040;
+}
+
+a:visited {
+	color:#666;
+	text-decoration:none;
+	border-bottom:dashed 1px #404040;
+}
+
+a:hover {
+	color:#404040;
+	text-decoration:none;
+	border-bottom:solid 1px #404040;
+}
+
+h4 a:link{
+	color:#4d853f;
+	border-bottom:dashed 1px #4d853f;
+}
+
+h4 a:visited {
+	color:#4d853f;
+	border-bottom:dashed 1px #4d853f;
+}
+
+h4 a:hover {
+	color:#4d853f;
+	border-bottom:solid 1px #4d853f;
+}
+
+/*-----------------------------------------------------------
+	List Module
+	このへん修正いる
+------------------------------------------------------------*/
+
+ul{
+	margin-bottom:1em;
+	list-style-type:square;
+	list-style-position:inside;
+}
+
+dl.program {
+	margin-bottom:1em;
+	width:580px;
+}
+
+dl.program dt{
+	line-height:1.4em;
+	float:left;
+	width:13em;
+}
+
+dl.program dd{
+	line-height:1.4em;
+	margin-left:10em;
+}
+
+/*-----------------------------------------------------------
+	Image Module
+------------------------------------------------------------*/
+
+div#photo img{
+	border-radius:12px;
+
+}
+
+/*-----------------------------------------------------------
+	Form Module
+------------------------------------------------------------*/
+
+select {
+	border:1px solid #808080;
+	width:20em;
+}
+
+input {
+	border:1px solid #808080;
+	padding:1px;
+}
+
+input.btn {
+	margin:0.5em 1em 1em 0;
+}
+
+textarea {
+	font-size:90%;
+	width:35em;
+	height:18em;
+	padding:1px;
+	border:1px solid #808080;
+}
+/*-----------------------------------------------------------
+	in Index
+	このへん修正いる
+------------------------------------------------------------*/
+
+dl#update {
+	margin-bottom:10px;
+	width:580px;
+}
+
+dl#update dt{
+	line-height:1.4em;
+	float:left;
+	width:6em;
+}
+
+dl#update dd{
+	line-height:1.4em;
+	margin-left:6em;
+}
+/*-----------------------------------------------------------
+	in About Us
+	このへん修正いる
+------------------------------------------------------------*/
+
+dl#calendar {
+	border:solid 1px #808080;
+    border-width: 0 1px 1px;
+	width:250px;
+	margin-bottom:1em;
+	float:left;
+}
+
+dl#calendar a{
+	color:#404040;
+	text-decoration:none;
+	border-bottom:dashed 1px #404040;
+}
+
+dl#calendar dt{
+	border-top:solid 1px #808080;
+	float:left;
+	text-align:right;
+	line-height:1.4em;
+	padding:0.1em 0;
+	width:60px;
+}
+
+dl#calendar dd{
+	border-top:solid 1px #808080;
+	border-left:solid 1px #808080;
+	margin-left:60px;
+	line-height:1.4em;
+	padding:0.1em 0 0.1em 0.5em;
+}
+
+div#event{
+	border:1px dashed #808080;
+	margin-left:260px;
+	width:250px;
+	height:15em;
+	padding:0 5px;
+}
+
+dl#part {
+	width:500px;
+	margin-bottom:1em;
+}
+
+dl#part dt{
+	background-color:#444;
+	color:#fff;
+	line-height:1.4em;
+	padding:3px 6px;
+	width:130px;
+	font-size:120%;
+}
+
+dl#part dd{
+	border:solid 1px #444;
+	line-height:1.3em;
+	margin-top:-1px;
+	padding:3px;
+	margin-bottom:10px;
+}
+
+dl.history{
+}
+
+dl.history dt{
+	line-height:1.4em;
+	float:left;
+	width:9em;
+}
+
+dl.history dd{
+	line-height:1.4em;
+	margin-left:9em;
+}
+/*-----------------------------------------------------------
+	in Concert
+------------------------------------------------------------*/
+
+p.more {
+	margin-top:-1em;
+	margin-bottom:1em;
+	font-size:90%;
+}
+div#fbpost a {
+	border:none;
+}
+img.concert {
+	border:1px solid #808080;
+	float:right;
+	margin:5px 10px;
+	padding:2px;
+}
+div#fbpost {
+	float:right;
+}
+/*-----------------------------------------------------------
+	in Inquiry
+------------------------------------------------------------*/
+
+p.form {
+	margin-top:0.5em;
+	margin-bottom:0px;
+}
+/*-----------------------------------------------------------
+	in Records
+------------------------------------------------------------*/
+
+div#records p{
+	margin-bottom:0.5em;
+}
+div#records h4{
+	margin-top:1em;
+	margin-bottom:0.2em;
+}
+div#records dl{
+}
+
+div#records dl dt{
+	width:3em;
+	line-height:1.3em;
+	float:left;
+}
+
+div#records dl dd{
+	line-height:1.3em;
+	margin-left:3em;
+}
+
+div.comp{
+	float:left;
+	width:10em;
+}
+
+div.name{
+	margin-left:10em;
+}
+
+div#records a{
+	border:none;
+}
+
+div#guide{
+	margin:1.5em 0;
+	line-height:1.2em;
+}
+div#guide span{
+	padding:0.4em 0.5em;
+	margin:0 0.2em;
+	border:solid 1px #808080;
+}
+
+div#guide span.pageNum{
+	display:none;
+}
+
+div#guide span.now{
+	background-color:#cccccc;
+}
+
+div#guide a{
+	padding:0.4em 0.5em;
+	border:none;
+}
+
+div#guide a.num{
+	margin:0 0.2em;
+	border:solid 1px #808080;
+}
+
+div#guide span.arrow{
+	margin:0;
+	border:none;
+}
+
+div#search {
+	font-size:90%;
+	margin-top:-2em;
+}
+
+div#search a{
+	border:none;
+}
+
+div#search div{
+	margin-left:500px;
+}
+
+div#search form{
+}
+
+div#search form input.text{
+	margin-top:0.5em;
+	width:110px;
+}
+
+a.highslide-credits,
+a.highslide-credits i {
+	border:none;
+	font-size:50%;
+}
+/*-----------------------------------------------------------
+	in Link
+------------------------------------------------------------*/
+
+div#link dl{
+	margin-bottom:1em;
+}
+
+div#link dt{
+	line-height:1.8em;
+}
+
+div#link dd{
+	font-size:90%;
+}
+}
