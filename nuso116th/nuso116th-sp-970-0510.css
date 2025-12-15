@@ -1,0 +1,292 @@
+@charset "UTF-8";
+html, body{
+	height: 100%;
+}
+body:after{
+	position: fixed;	/* 固定配置 */
+	top: 0;
+	left: 0;	/* 左上に固定 */
+	width: 100%;
+	height:	100%;	/* 画面全体を覆う */
+	content: "";
+	background: #267339;	/* 保険用 */
+	background: -moz-linear-gradient(top, #267339 0%, #40c060 100%);
+	background: -webkit-linear-gradient(top, #267339 0%, #40c060 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#267339', endColorstr='#40c060', GradientType=0);
+	background: linear-gradient(to bottom, #267339 0%, #40c060 100%);	/* 正規のプロパティ */
+	z-index: -10;
+}
+body{
+	font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
+	/* vertical-align: middle; */
+}
+h1{
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	color: #fff;
+}
+h1:after{
+	content: 'Nagoya University Symphony Orchestra the 116th Regular Concert';
+	font-size: 0.5em;
+	display: block;
+}
+.tab_wrap{
+	width: 950px;
+	margin: 20px auto;
+}
+input[type="radio"]{
+	display: none;
+}
+.tab_area{
+	font-size: 0;
+	margin: 0 10px;
+}
+.tab_area label{
+	width: 120px;
+	margin: 0 5px;
+	display: inline-block;
+	padding: 12px 0;
+	background: #ddd;
+	text-align: center;
+	font-size: 13px;
+	cursor: pointer;
+	transition: ease 0.2s opacity;
+}
+.tab_area label:hover{
+	opacity: 0.75;
+}
+.panel_area{
+	background: #fff;
+}
+.tab_panel{
+	width: 100%;
+	padding: 20px;
+	display: none;
+	box-sizing: border-box;
+}
+.tab_panel p{
+	padding: 10px;
+}
+#tab1:checked ~ .tab_area .tab1_label, #tab2:checked ~ .tab_area .tab2_label, #tab3:checked ~ .tab_area .tab3_label, #tab4:checked ~ .tab_area .tab4_label, #tab5:checked ~ .tab_area .tab5_label{
+	background: #fff;
+	color: #000;
+}
+#tab1:checked ~ .panel_area #panel1, #tab2:checked ~ .panel_area #panel2, #tab3:checked ~ .panel_area #panel3, #tab4:checked ~ .panel_area #panel4, #tab5:checked ~ .panel_area #panel5{
+	display: block;
+}
+.cover{
+	display: table;
+	border-spacing: 1em;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+.cover .box1{
+	display: table-cell;
+	width: 66%;
+	text-align: center;
+}
+.cover .box2{
+	display: table-cell;
+}
+.solid_line{
+	border-top: solid 1px gray;
+	border-bottom: solid 1px gray;
+}
+h2{
+	position: relative;
+	line-height: 1.4;
+	padding: 0.25em 1em;
+	display: inline-block;
+	top: 0;
+}
+h2:before, h2:after{
+	position: absolute;
+	top: 0;
+	content:'';
+	width: 8px;
+	height: 100%;
+	display: inline-block;
+}
+h2:before{
+	border-left: solid 1px black;
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+	left: 0;
+}
+h2:after{
+	content: '';
+	border-top: solid 1px black;
+	border-right: solid 1px black;
+	border-bottom: solid 1px black;
+	right: 0;
+}
+ul{
+	margin-left: 40px;
+	text-align: left;
+}
+p.resizeimage{
+	padding: 0;
+}
+p.resizeimage img{
+	width: 100%;
+}
+.cover .box3, .cover .box4{
+	display: table-cell;
+	width: 33%;
+}
+.cover .box5{
+	display: table-cell;
+}
+.box11, .box12{
+	padding: 0.5em;
+	margin: 2em 0;
+	background: #f8f8f8;
+	/* border-left: double 7px #AEC4E5; */
+	/* border-right: double 7px #AEC4E5; */
+}
+.contentbox{
+	margin: 2em 0;
+	background: #a3c2b3;
+}
+.contentbox .box-title{
+	font-size: 1.2em;
+	background: #a3c2b3;
+	padding: 4px;
+	text-align: center;
+	/* color: #FFF; */
+	border-bottom: solid 1px #fff;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+}
+.contentbox p{
+	padding: 15px 20px;
+	margin: 0;
+}
+.box3 p, .box4 p, .box5 p, .box11 p, .box12 p{
+	margin: 0;
+}
+.minititle{
+	border-bottom: solid 3px #4072B3;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+.address{
+	padding: 0.5em 1em;
+	margin: 2em 0;
+	border: double 5px #EB8686;
+}
+.address p{
+	margin: 0;
+	padding: 0;
+}
+.cover .box11, .cover .box11sp{	/* 増えた */
+	display: table-cell;
+	width: 50%;
+}
+.cover .box12, .cover .box12sp{	/* 増えた */
+	display: table-cell;
+}
+.copyright{
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+}
+p.poster img{
+	width: 80%;
+}
+p.spphoto img{	/* 増えた */
+	width: 100%;
+}
+.specialkiji_tab_area{
+	font-size: 0;
+	margin: 0 10px;
+}
+.specialkiji_tab_area label{
+	width: 120px;
+	margin: 0 5px;
+	display: inline-block;
+	padding: 0;
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	transition: ease 0.2s opacity;
+}
+.specialkiji_tab_area label:hover{
+	background: #ddd;
+}
+.specialkiji_tab_panel{
+	width: 100%;
+	padding: 0;
+	display: none;
+	box-sizing: border-box;
+}
+.specialkiji_tab_panel p{
+	padding: 10px;
+}
+#tab6:checked ~ .specialkiji_tab_area .tab6_label, #tab7:checked ~ .specialkiji_tab_area .tab7_label{
+	border-bottom: solid 1px #4072B3;
+}
+#tab6:checked ~ .specialkiji_panel_area #specialkiji_panel1, #tab7:checked ~ .specialkiji_panel_area #specialkiji_panel2{
+	display: block;
+}
+.spkiji{	/* 増えた */
+	margin: 0;
+}
+.takayabox{
+   	position: relative;
+	margin: 2em 0;
+	padding: 25px 10px 7px;
+	border: solid 2px #40c060;
+}
+.takayabox .takayatitle {
+	position: absolute;
+	display: inline-block;
+	top: -2px;
+	left: -2px;
+	padding: 0 9px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 17px;
+	background: #40c060;
+	color: #ffffff;
+	font-weight: bold;
+}
+.takayabox p{
+	margin: 0; 
+	padding: 0;
+}
+.takayaq{
+	padding: 0.5em;
+	margin: 2em 0;
+	background: #f8f8f8;
+}
+hr{
+	border-width: 1px 0px 0px 0px;
+	border-style: solid;
+	border-color: #4072B3;
+}
+.takayam img{
+	max-width: 200px;
+}
+p.takayam{
+	text-align: center;
+	margin: 16px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
+}
+p.takayad{
+	text-align: center;
+	margin: 0px 0px 16px 0px;
+	padding: 0px 0px 10px 0px;
+}
+.message{
+	padding: 0.5em 1em;
+	margin: 2em 0;
+	border: double 5px #EB8686;
+}
+.message p{
+	margin: 0; 
+	padding: 0;
+}
