@@ -1,6 +1,16 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap'); 
+ 
+:root{
+    --color-primary: #4A954A;
+    --color-primary-600: #3B7A3B;
+    --color-text: #111827;
+    --radius: 10px;
+    --shadow-soft: 0 8px 24px rgba(16,24,40,0.08);
+    --shadow-strong: 0 12px 36px rgba(16,24,40,0.12);
+    --ease: 180ms cubic-bezier(.2,.9,.18,1);
+}
 
 * {
     box-sizing: border-box;
@@ -26,21 +36,21 @@ body {
     border-color: #4A954A;
 }
 
-.contact-table {
-    width: 100%;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+.contact-submit {
+    display:block;
+    margin:0 auto;
+    font-weight:600;
+    padding:0.56rem 1rem;
+    border-radius:999px; /* pill */
+    background: var(--color-primary);
+    color:#fff;
+    border:0;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(74,149,74,0.12);
+    transition:transform 120ms var(--ease), box-shadow 120ms var(--ease);
 }
-
-.contact-item,
-.contact-body {
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-
-.contact-item {
-    text-align: left;
-    width: 30%;
+.contact-submit:hover{ transform:translateY(-3px); box-shadow:var(--shadow-strong); }
+.contact-submit:focus{ outline:none; box-shadow:0 0 0 4px rgba(74,149,74,0.12); }
     background-color: #eee;
 }
 
@@ -79,18 +89,18 @@ body {
 }
 
 .contact-submit {
-    width: 250px;
-    background-color: #333;
-    color: #fff;
-    font-weight: bold;
-    display: block;
-    margin: 0 auto;
-    font-size: 16px;
-    padding: 15px;
-    border-radius: 100vh;
-    border: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
+    display:block;
+    margin:0 auto;
+    font-weight:600;
+    padding:0.56rem 1rem;
+    border-radius:var(--radius);
+    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-600));
+    color:#fff;
+    border:0;
+    cursor:pointer;
+    box-shadow:var(--shadow-soft);
+    transition:transform 120ms var(--ease), box-shadow 120ms var(--ease);
 }
+
+.contact-submit:hover{ transform:translateY(-3px); box-shadow:var(--shadow-strong); }
+.contact-submit:focus{ outline:none; box-shadow:0 0 0 4px rgba(14,165,164,0.12); }

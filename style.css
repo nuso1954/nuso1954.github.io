@@ -2,8 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap');
 
+:root{
+    --color-primary: #4A954A;
+    --color-primary-600: #3B7A3B;
+    --color-accent: #7C3AED;
+    --color-text: #111827;
+    --color-muted: #6B7280;
+    --radius: 10px;
+    --shadow-soft: 0 8px 24px rgba(16,24,40,0.08);
+    --shadow-strong: 0 12px 36px rgba(16,24,40,0.12);
+    --ease: 180ms cubic-bezier(.2,.9,.18,1);
+}
+
 html{
-    scroll-behavior: smooth;
+        scroll-behavior: smooth;
 }
 
 *{
@@ -627,6 +639,41 @@ nav{
     gap: 30px;
 }
 
+/* モダンボタン共通 */
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.5rem;
+    padding:0.6rem 1.4rem;
+    border-radius:999px; /* 横が丸いピル型 */
+    font-weight:600;
+    font-family: inherit; /* ページの既存フォントを継承 */
+    cursor:pointer;
+    transition:transform 120ms var(--ease), box-shadow 120ms var(--ease), background-color 120ms var(--ease), border-color 120ms var(--ease), color 120ms var(--ease);
+    border:0;
+}
+
+.btn--primary{
+    background: var(--color-primary);
+    color:#fff;
+    box-shadow: 0 8px 20px rgba(74,149,74,0.12);
+}
+.btn--primary:hover{ transform:translateY(-3px); box-shadow:var(--shadow-strong); }
+.btn--primary:active{ transform:translateY(0); box-shadow:var(--shadow-soft); }
+
+.btn--outline{
+    background:transparent;
+    color:var(--color-primary);
+    border:1px solid rgba(74,149,74,0.12);
+}
+.btn--outline:hover{ background:rgba(74,149,74,0.06); border-color:var(--color-primary); }
+
+.btn--ghost{ background:transparent; color:var(--color-text); }
+.btn--ghost:hover{ background:rgba(17,24,39,0.06); }
+
+.btn:focus{ outline:none; box-shadow: 0 0 0 4px rgba(14,165,164,0.12); border-radius:calc(var(--radius) + 2px); }
+
 
 
 #cont{
@@ -663,20 +710,26 @@ nav{
 }
 
 #btn{
-    width: 230px;
-    height: 30px;
+    min-width: 230px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    background: #4A954A;
-    border-radius: 3em;
+    color: #fff;
+    background: var(--color-primary);
+    border-radius: 999px;
     cursor: pointer;
-    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(74,149,74,0.12);
+    transition: transform 120ms var(--ease), box-shadow 120ms var(--ease), color 120ms var(--ease);
+    border: 0;
+    padding: 0 1.2rem;
+    font-weight: 600;
 }
 
 #btn:hover{
-    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+    color: #fff;
 }
 
 #cont{
@@ -693,45 +746,52 @@ nav{
 }
 
 .downloadButton a{
-    height: 30px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     text-decoration: none;
-    background: #4A954A;
-    border-radius: 3em;
+    background: var(--color-primary);
+    border-radius: 999px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 120ms var(--ease), box-shadow 120ms var(--ease);
+    box-shadow: 0 8px 20px rgba(74,149,74,0.12);
+    padding: 0 1.2rem;
+    font-weight: 600;
 }
 
-.downloadButton:hover a{
-    color: #000000;
+.downloadButton a:hover{
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+    color: #fff;
 }
 
 
 
 .totop{
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    background-color: #4A954A;
-    border-radius: 10%;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-600));
+    border-radius: 50%;
     color:#fff;
     text-align: center;
-    font-size: 45px;
+    font-size: 28px;
     position: fixed;
     right: 20px;
     bottom: 20px;
     user-select: none;
     cursor: pointer;
-    transition: 0.3s;
-    padding-top: 4px;
+    transition: transform 120ms var(--ease), box-shadow 120ms var(--ease);
+    box-shadow: var(--shadow-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .totop:hover{
-    transform: translateY(-10px);
-    scale: 1.1;
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-strong);
 }
 
 
