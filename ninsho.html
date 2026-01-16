@@ -11,15 +11,7 @@
         <link rel="stylesheet" href="style.css"/>
         <link rel="icon" type="image/png" href="img/favicon.PNG">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <!-- パスワード保護 -->
-        <script>
-            var pw;
-            pw = prompt("パスワードを入力して下さい。","");
-            
-            if (pw != "")
-              location.href = pw+".html";
-            
-        </script>
+        <script type="text/javascript" src="sha256.js"></script>
     </head>
 
 
@@ -80,10 +72,55 @@
                 団内に公開を限定しています。パスワードはインターネット係がご案内します。
             </p><br>
             
+            <form id="passwordForm" style="text-align: center; margin: 40px 0;">
+                <p id="message" style="font-size: 18px; margin-bottom: 20px;">パスワードを入力してください。</p>
+                <input type="password" placeholder="パスワード" id="password" style="padding: 10px; font-size: 16px; width: 300px; max-width: 90%;">
+                <br><br>
+                <button type="submit" style="padding: 10px 30px; font-size: 16px; cursor: pointer;">アクセス</button>
+            </form>
+            
         </div>
 
-        <input type="button" value="パスワードを入力して団内専用ページにアクセスする。" on click="gate();">
 
+        <script>
+            function hash(text) {
+                const sha = new jsSHA('SHA-256', 'TEXT');
+                sha.update(text);
+                return sha.getHash('HEX');
+            }
+            
+            function auth(password) {
+                const url = hash(password) + '.html';
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', url);
+                xhr.send();
+                xhr.onload = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        window.location = url;
+                    } else {
+                        const message = document.getElementById('message');
+                        const input = document.getElementById('password');
+                        message.innerHTML = 'パスワードが間違っています。もう一度お試しください。';
+                        message.style.color = 'red';
+                        input.value = '';
+                    }
+                };
+                xhr.onerror = function () {
+                    const message = document.getElementById('message');
+                    message.innerHTML = 'エラーが発生しました。';
+                    message.style.color = 'red';
+                };
+            }
+            
+            const form = document.getElementById('passwordForm');
+            if (form) {
+                form.addEventListener('submit', function (event) {
+                    const password = document.getElementById('password').value;
+                    auth(password);
+                    event.preventDefault();
+                });
+            }
+        </script>
 
         <div class="footercr">
             <a class="meidailogo" href="https://www.nagoya-u.ac.jp/academics/circle/circle/index.html" target="_blank" rel="noopener noreferrer">
