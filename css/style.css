@@ -51,8 +51,6 @@ body {
 }
 .contact-submit:hover{ transform:translateY(-3px); box-shadow:var(--shadow-strong); }
 .contact-submit:focus{ outline:none; box-shadow:0 0 0 4px rgba(74,149,74,0.12); }
-    background-color: #eee;
-}
 
 .contact-body {
     width: 70%;
