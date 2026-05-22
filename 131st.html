@@ -111,14 +111,14 @@
                     <div class="Topnews">
 
                         <div class="concertphoto">
-                            <img src="img/131_note.pdf" alt="131st ポスター" width="80%">
+                            <img src="img/131.jpg" alt="131st ポスター" width="80%">
                         </div>
 
                         <div class="concertdetail">
 
-                            <div class="totickets">
-                            <h3><a class="btn btn--primary" href="tickets.html">チケットはこちら</a></h3>
-                            </div>
+                            <!-- <div class="totickets">
+                            <h3><a href="tickets.html">チケットはこちら</a></h3>
+                            </div> -->
                                 
                             <p><b>指揮</b><br>&emsp;北原幸男</p><br>
                     
@@ -130,24 +130,25 @@
                             </tr>
                     
                                 <tr align="center">
-                                    <td>交響曲第6番イ長調 WAB 106<br>Symphony No.6 in A major WAB 106</td>
+                                    <td>交響曲第6番 イ長調 WAB 106<br>Symphonie Nr.6 A-Dur, WAB 106</td>
                                     <td>ブルックナー<br>Anton Bruckner</td>
                                 </tr>
                                 
                                 <tr align="center">
-                                    <td colspan="2">ほか</td>
+                                    <td>未定<br>Pending</td>
+                                    <td>未定<br>Pending</td>
                                 </tr>
                                 
-                                <!-- <tr align="center">
-                                    <td>歌劇「リエンツィ」 序曲<br>"Rienzi" Overture</td>
-                                    <td>ワーグナー<br>Richard Wagner</td>
-                                </tr> -->
+                                <tr align="center">
+                                    <td>未定<br>Pending</td>
+                                    <td>未定<br>Pending</td>
+                                </tr>
                                 </table><br>
-                            <p><b>日時</b><br>&emsp;2026年12月28日(月) 16:00開場 17:00開演(予定)</p><br>
-                            <p><b>会場</b><br>&emsp;<a href="https://maps.app.goo.gl/5xmQCSPN5RfCsrNw6" target="_blank" rel="noopener noreferrer">刈谷市総合文化センター アイリス 大ホール(GoogleMap)</a></p><br>
+                            <p><b>日時</b><br>&emsp;2026年12月28日(月) 16:00開場 17:00(予定)開演(予定)</p><br>
+                            <p><b>会場</b><br>&emsp;<a href="https://maps.app.goo.gl/j9vykYsoxSpeEMzh7" target="_blank" rel="noopener noreferrer">刈谷市総合文化センター アイリス 大ホール(GoogleMap)</a></p><br>
                             <p><b>入場料</b><br>&emsp;前売券 800円 / 当日券 1000円<br>&emsp;※未就学児の入場はご遠慮ください。</p><br>
-                            <!-- <p><b>後援(申請中)</b><br>&emsp;愛知県教育委員会、名古屋市、中日新聞社、FM AICHI</p><br> -->
-                            <p><b>お問い合わせ</b><br>&emsp;nuso131st&gmail.com (&を@に直してください)</p><br>
+                            <!-- <p><b>後援</b><br>&emsp;愛知県教育委員会、名古屋市、中日新聞社、FM AICHI</p><br> -->
+                            <p><b>お問い合わせ</b><br>&emsp;nuso131st@gmail.com (&を@に直してください)</p><br>
                         </div>
 
                     </div>
@@ -164,7 +165,7 @@
                     </div> -->
 
                     <div class="backtoconcert">
-                        <br><nobr>
+                        <nobr>
 
                         <a href="concert.html">演奏会一覧</a>&emsp;
                         <a href="130th.html">⇢ 前の演奏会</a>
@@ -235,22 +236,25 @@
                             });
 
         
-                        const targetDate = new Date("2026/05/04"); // 設定した日付をここに入力
+                        const targetDate = new Date("2026/12/28"); // 設定した日付をここに入力
                         const now = new Date();
+                        // 日付のみで比較するため、時刻を切り捨てた日付オブジェクトを作成
+                        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                        const targetDay = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate());
 
-                        // 86, 87行目: メッセージ切り替え
-                        if (now > targetDate) {
+                        // メッセージ切り替え（日付のみで比較）
+                        if (today > targetDay) {
                             $(".background .text h3").text("ご来場いただきありがとうございました。");
                         }
 
-                        // 96-108行目: カウントダウン終了後のメッセージ変更
-                        if (now > targetDate) {
+                        // カウントダウン終了後のメッセージ変更（日付のみで比較）
+                        if (today > targetDay) {
                             $("#right").text("(終演しました)");
                         }
 
-                        // 192行目: 次の演奏会へのリンク挿入
-                        if (now > targetDate) {
-                        $(".backtoconcert").prepend('<a href="132nd.html">次の演奏会 ⇠</a>&emsp;');
+                        // 次の演奏会へのリンク挿入（日付のみで比較）
+                        if (today > targetDay) {
+                            $(".backtoconcert").prepend('<a href="132nd.html">次の演奏会 ⇠</a>&emsp;');
                         }
 
                         // 228行目: 年号を自動更新
